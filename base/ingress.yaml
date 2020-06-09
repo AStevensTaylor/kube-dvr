@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: htpc
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: plex
+          servicePort: webui
+      - path: /jackett
+        backend:
+          serviceName: jackett
+          servicePort: webui
+      - path: /sonarr
+        backend:
+          serviceName: sonarr
+          servicePort: webui
+      - path: /bazarr
+        backend:
+          serviceName: bazarr
+          servicePort: webui
+      - path: /transmission
+        backend:
+          serviceName: transmission
+          servicePort: webui

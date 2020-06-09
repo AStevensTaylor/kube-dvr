@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../../base
+
+images:
+  - name: linuxserver/jackett
+    newTag: amd64-latest
+  - name: linuxserver/sonarr
+    newTag: amd64-latest
+  - name: linuxserver/radarr
+    newTag: amd64-latest
+  - name: linuxserver/bazarr
+    newTag: amd64-latest
+  - name: linuxserver/transmission
+    newTag: amd64-latest
+  - name: plexinc/pms-docker
+    newTag: latest
